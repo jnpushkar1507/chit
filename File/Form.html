@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Form</title>
+    <style>
+        .sub {
+            border-radius: 20px;
+            margin-top: 5px;
+        }
+
+        .fr {
+            width: 200px;
+            background-color: greenyellow;
+        }
+
+        .aadhar {
+            width: 50px;
+        }
+    </style>
+    <script src="Validation.js"></script>
+</head>
+
+<body>
+    <fieldset class="fr">
+        <legend>Registration Form</legend>
+        <form name="regform" onsubmit="regValidate()" >
+            Name:<br><input type="text" name="name" id="name"  required>
+            <br> Email:
+            <br><input type="email" name="email" id="email " required>
+            <br> Phone:
+            <br><input type="text" name="phone" id="phone"  required>
+            <br> Aadhar Number:
+            <br><input class="aadhar" type="text" name="aadhar" id="aadhar"  required>&nbsp<input
+                class="aadhar" type="text" name="aadhar" id="aadhar2"  required>&nbsp<input class="aadhar"
+                type="text" name="aadhar" id="aadhar3"  required>
+            <br>Pincode:
+            <br><input type="text" name="pincode" id="pincode"  required>
+            <br> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            <input class="sub" type="submit" id="button" name="submit">
+        </form>
+    </fieldset>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+    <title>Temperature</title>
+    <style>
+        .field {
+            width: 150px;
+        }
+
+        #submit {
+            margin: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset class="field">
+        <legend>Temperature</legend>
+        Fahrenheit:<br>
+        <input type="text" id="F">
+        <br> Celsius:
+        <br>
+        <input type="text" id="C">
+        <br>
+        <input type="submit" id="submit" onclick="temp()" >
+    </fieldset>
+</body>
+<script>
+    function temp() {
+        var F = document.getElementById("F");
+        var C = document.getElementById("C");
+        if (F.value) {
+            C.value = 5 * (F.value - 32) / 9;
+        } 
+        else {
+            F.value = (9 * C.value) / 5 + 32;
+        }
+    }
+</script>
+
+</html>

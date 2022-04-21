@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <script>
+        function zigzag() {
+            // var n = Number(prompt("enter size"))
+            var k = prompt();
+            var arr = k.split(" ");
+            var n=arr.length;
+            var temp;
+            var flag = true;
+            document.write(arr.sort()+"<br>")   ;
+            for (var i = 0; i <= n - 1; i++) {
+                if (flag) {
+                    if (arr[i] > arr[i + 1]) {
+                        temp = arr[i];
+                        arr[i] = arr[i + 1]
+                        arr[i + 1] = temp;
+                    }
+                }
+                else {
+                    if (arr[i] < arr[i + 1]) {
+                        temp = arr[i];
+                        arr[i] = arr[i + 1]
+                        arr[i + 1] = temp;
+                    }
+                }
+                flag = !flag
+            }
+            document.write(arr);
+        } 
+    </script>
+</head>
+
+<body>
+    <input type="button" onclick="zigzag()" value="rearrange positive and negative numbers">
+</body>
+
+</html>
